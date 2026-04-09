@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luminary </title>
+  <meta name="description" content="Professional-grade image enhancement. Local processing, total privacy.">
+  <link rel="icon" type="image/svg+xml" href="icon/favicon.svg">
+  <link rel="alternate icon" href="icon/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<!--  global nav -->
+<nav class="top-nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="#" data-page="landing" aria-label="Luminary home">
+    <img src="icon/favicon.svg" alt="" width="22" height="22" style="display:inline-block;vertical-align:middle;margin-right:7px;margin-top:-2px;">Luminary
+  </a>
+  <div class="nav-links">
+    <a class="nav-link active" href="#" data-page="landing">Features</a>
+    <a class="nav-link" href="#" data-page="editor">Editor</a>
+    <a class="nav-link" href="#" data-page="privacy">Privacy</a>
+    <a class="nav-link" href="#" data-page="about">About</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+    <svg class="icon-sun"  width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m13.86 13.86.707.707M3 12h1m16 0h1m-3.22-7.78-.707.707M6.927 17.073l-.707.707"/><circle cx="12" cy="12" r="4"/></svg>
+  </button>
+    <button class="btn-nav-cta" data-page="editor">Launch Editor</button>
+  </div>
+</nav>
+
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<!--  page: landing -->
+<div id="page-landing" class="page landing active">
+  <!-- Hero Section -->
+  <section class="hero-section" aria-label="Hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow fade-up">Image Enhancement Studio</p>
+      <h1 class="hero-title fade-up-2">Enhance with<br><em>Clarity</em></h1>
+      <p class="hero-body fade-up-3">
+        Luminary is a professional digital image processing tool that enhances your  images in high quality.  
+        Everything is processed directly on your device, ensuring complete privacy.
+      </p>
+      <div class="hero-actions fade-up-3">
+        <button class="btn-primary" data-page="editor">
+          Open Editor →
+        </button>
+        <button class="btn-ghost" data-page="about">View Showcase</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-container">
+        <div style="position:absolute;inset:0;overflow:hidden;">
+          <img src="images/Before.jpg" alt="Before enhancement"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+          <div style="position:absolute;inset:0;left:50%;overflow:hidden;">
+            <img src="images/After.png" alt="After enhancement"
+              style="position:absolute;top:0;left:-100%;width:200%;height:100%;object-fit:cover;object-position:center;">
+          </div>
+          <span style="position:absolute;top:16px;left:18px;font-family:var(--font-sans);font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,244,240,.7);background:rgba(26,25,22,.5);padding:4px 9px;border-radius:4px;backdrop-filter:blur(6px);">Original</span>
+          <span style="position:absolute;top:16px;right:18px;font-family:var(--font-sans);font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,244,240,.7);background:rgba(26,25,22,.5);padding:4px 9px;border-radius:4px;backdrop-filter:blur(6px);">Enhanced</span>
+          <div style="position:absolute;top:0;bottom:0;left:50%;width:1.5px;background:rgba(245,244,240,0.55);transform:translateX(-50%);"></div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;">
+            <svg width="12" height="12" fill="none" stroke="#1a1916" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <!-- <span class="hero-badge-dot"></span> -->
+        Enhance your images like never before.
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section" aria-label="Features">
+    <p class="section-label">Built for Quality</p>
+    <h2 class="section-title">Engineered with precision.</h2>
+    <p class="section-body">
+      Advanced optical algorithms designed to deliver reliable results
+      for every kind of image workflow.
+    </p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">✦</div>
+        <div class="feature-name">Crystal Clear Clarity</div>
+        <div class="feature-desc">Sophisticated edge detection and de-noise patterns that restore lost textures without artefacts.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◎</div>
+        <div class="feature-name">Vibrant Color</div>
+        <div class="feature-desc">Mathematical mapping of colour spaces to ensure natural skin tones and vibrant environmental palettes.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⬡</div>
+        <div class="feature-name">Privacy-First Processing</div>
+        <div class="feature-desc">Your images never leave your device. All processing is handled strictly using your computer's hardware.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-section" aria-label="How it works">
+    
+    <div class="how-imgs">
+      <div class="how-img how-img-1">
+        <svg width="100%" height="100%" viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="240" fill="#1e1d1a"/>
+          <circle cx="150" cy="100" r="70" fill="none" stroke="#2d4a5e" stroke-width="40"/>
+          <circle cx="150" cy="100" r="40" fill="none" stroke="#3a3a37" stroke-width="20"/>
+          <circle cx="150" cy="100" r="15" fill="#2a2925"/>
+          <rect x="0" y="160" width="300" height="80" fill="#252420"/>
+        </svg>
+      </div>
+      <div class="how-img how-img-2">
+        <svg width="100%" height="100%" viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="240" fill="#c8b89a"/>
+          <ellipse cx="150" cy="90" rx="60" ry="75" fill="#a08060"/>
+          <ellipse cx="150" cy="70" rx="35" ry="40" fill="#d4c0a8"/>
+          <rect x="0" y="180" width="300" height="60" fill="#b0a090"/>
+        </svg>
+      </div>
+    </div>
+
+    <div>
+      <p class="section-label" style="margin-bottom:20px">How it works</p>
+      <h2 class="section-title" style="margin-bottom:32px">Upload, adjust,<br>compare, download</h2>
+      <div class="steps-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Upload Locally</div>
+            <div class="step-desc">Drag and drop any high-res image. Files are held in browser memory, never uploaded to a server.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Choose Your Effect</div>
+            <div class="step-desc">Pick from 11 purpose-driven enhancement modes to elevate your images and give them a new life.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Compare & Export</div>
+            <div class="step-desc">Use the precision split-view to evaluate your changes, then download lossless PNG output.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Banner -->
+  <div class="privacy-section">
+    <div>
+      <p class="section-label">Zero-Data Policy</p>
+      <h2 class="section-title" style="font-size:1.9rem;margin-bottom:12px">Your vision, your data.</h2>
+      <p style="font-size:.88rem;color:var(--ink-3);line-height:1.65;max-width:440px">
+        We believe in honest technology. Luminary is different from other tools.
+        All processing is handled locally inside your browser window without
+        sending a single byte to an external server.
+      </p>
+      <div class="privacy-badges">
+        <div class="privacy-badge">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.955 11.955 0 003 12c0 6.627 5.373 12 12 12 6.628 0 12-5.373 12-12 0-1.868-.428-3.636-1.188-5.21A11.954 11.954 0 0020.4 6"/></svg>
+          No Registration Required
+        </div>
+        <div class="privacy-badge">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+          100% Local Processing
+        </div>
+      </div>
+    </div>
+    <div>
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="58" stroke="var(--border)" stroke-width="1.5"/>
+        <path d="M60 20 L60 100 M20 60 L100 60" stroke="var(--border)" stroke-width="1"/>
+        <circle cx="60" cy="60" r="30" stroke="var(--border-strong)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <circle cx="60" cy="60" r="8" fill="var(--ink-4)" opacity="0.3"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq-section" aria-label="Frequently asked questions">
+    <p class="section-label" style="text-align:center;margin-bottom:10px">Frequently Asked</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How does local processing work?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-a">
+          Luminary uses the browser's Canvas API to process images directly inside your browser window without sending a single byte to an external server. Your images are loaded into memory, manipulated pixel-by-pixel using mathematical algorithms, and the result is offered for download.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What file types are supported?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-a">
+          Luminary supports JPEG, PNG, WebP, GIF, and BMP and  any format your browser can render. Output is always lossless PNG to preserve maximum quality.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Is it free for professional use?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-a">
+          Yes. Luminary is completely free with no watermarks, no usage limits, and no registration. It was built as my personal project to demonstrate browser-native image processing.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" aria-label="Call to action">
+    <h2 class="cta-title">Ready to enhance?<br><em>Start right now.</em></h2>
+    <p class="cta-sub">Start improving your images with professional tools today. No registration needed.</p>
+    <div class="cta-actions">
+      <button class="btn-cta-white" data-page="editor">Launch Free Editor</button>
+      <button class="btn-cta-outline" data-page="about">Read Documentation</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer" role="contentinfo">
+    <div>
+      <div class="footer-brand">Luminary Atelier</div>
+      <div class="footer-copy">© 2026 Luminary Atelier. All rights reserved.<br>All processing is performed locally on your device.</div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Product</div>
+      <a href="#" data-page="landing">Features</a>
+      <a href="#" data-page="editor">Editor</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="#" data-page="about">About</a>
+      <a href="#" data-page="privacy">Privacy</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="#" data-page="privacy">Privacy Policy</a>
+      <a href="#" data-page="about">Terms of Service</a>
+    </div>
+  </footer>
+</div>
+
+
+<!--  editor page -->
+<div id="page-editor" class="page editor-page">
+
+
+  <main class="editor-canvas-wrap" role="main">
+    <!-- top info bar -->
+    <div class="canvas-top-bar">
+      <div class="canvas-info-chip">
+        <span id="zoomChip">—</span>
+        <span id="dimChip">No image</span>
+        <span id="sizeChip">—</span>
+      </div>
+    </div>
+
+
+    <div class="editor-canvas-area">
+      <!-- upload prompt -->
+      <label class="upload-placeholder" id="uploadPlaceholder" for="fileInput" aria-label="Upload an image">
+        <input type="file" id="fileInput" class="upload-file-input" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp" aria-label="Choose image file">
+        <div class="upload-icon-wrap">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg>
+        </div>
+        <div class="upload-title">Drop image here</div>
+        <div class="upload-sub">or click to browse · JPG, PNG, WEBP · up to 30 MB</div>
+      </label>
+
+      <!-- Image display -->
+      <div class="img-wrapper" id="imgWrapper" style="display:none" role="img" aria-label="Edited image">
+        <canvas id="mainCanvas" aria-label="Image canvas"></canvas>
+
+        <!-- Split overlay -->
+        <div class="split-overlay" id="splitOverlay">
+          <span class="split-left-label">Original</span>
+          <span class="split-right-label">Enhanced</span>
+          <div class="split-handle-line" id="splitHandle" style="left:50%" role="slider" aria-label="Split view position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+            <div class="split-handle-circle" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- change image  -->
+      <button id="changeImgBtn"
+        aria-label="Change image"
+        style="display:none;position:absolute;top:12px;right:12px;z-index:20;
+               align-items:center;gap:6px;padding:6px 13px;border-radius:6px;
+               border:1.5px solid var(--border);background:var(--surface);
+               color:var(--ink-2);font-family:var(--font-sans);font-size:.75rem;
+               font-weight:500;cursor:pointer;box-shadow:var(--shadow-sm);
+               transition:all var(--transition);">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+        </svg>
+        Change Image
+      </button>
+
+      <!-- Processing overlay -->
+      <div class="process-overlay" id="processOverlay" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <span class="process-label">Applying effect…</span>
+      </div>
+    </div>
+
+    <div class="editor-toolbar-wrap">
+      <!-- Tool selector-->
+      <div class="editor-h-toolbar" role="toolbar" aria-label="Editor tools">
+        <button class="h-tool-btn active" id="toolEnhance" aria-label="Enhance tools">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          <span>Enhance</span>
+        </button>
+        <button class="h-tool-btn" id="toolHistory" aria-label="History (coming soon)" title="History — coming soon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l2.5 2.5M3.05 11a9 9 0 101.41-4.7L1 9"/><path stroke-linecap="round" stroke-linejoin="round" d="M1 5v4h4"/></svg>
+          <span>History</span>
+        </button>
+        <button class="h-tool-btn" id="toolbarExport" aria-label="Export image">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+          <span>Export</span>
+        </button>
+      </div>
+
+      <!-- Status, view tabs and  actions -->
+      <div class="canvas-bottom-bar">
+        <div class="view-mode-tabs" role="tablist" aria-label="View mode">
+          <button class="view-tab active" data-view="result" role="tab" aria-selected="true">Result</button>
+          <button class="view-tab" data-view="split"  role="tab" aria-selected="false">Compare</button>
+          <button class="view-tab" data-view="original" role="tab" aria-selected="false">Original</button>
+        </div>
+        <span style="font-size:.72rem;color:var(--ink-4)" id="procTime"></span>
+        <div class="canvas-bottom-actions">
+          <button class="btn-sm" id="btnReset" aria-label="Reset to defaults">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+            Reset
+          </button>
+          <button class="btn-sm btn-sm-primary" id="btnExport" aria-label="Export image">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            Export
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Right Panel -->
+  <aside class="editor-right-panel" role="complementary" aria-label="Settings panel">
+    <!-- Panel header -->
+    <div class="panel-section">
+      <div class="panel-title">Precision Tools</div>
+      <div class="panel-subtitle">V 2.1 • Stable Engine</div>
+      <button class="auto-btn" id="btnAutoAdj" aria-label="Apply smart automatic adjustment">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+        Smart Auto-Adjust
+      </button>
+      <p class="auto-btn-hint">Analyses brightness, contrast &amp; shadows — picks the best correction automatically.</p>
+    </div>
+
+    <!-- effect selector -->
+    <div class="filter-scroll" id="filterList" role="listbox" aria-label="Enhancement effects"></div>
+
+    <!-- controls -->
+    <div class="panel-section" id="controlsSection" style="padding:0">
+      <div class="controls-panel" id="controlsPanel" style="padding:16px 18px"></div>
+    </div>
+
+    <!-- Histogram (only for histeq) -->
+    <div class="histogram-section hidden" id="histWrap">
+      <div class="hist-label">Brightness Distribution</div>
+      <div class="hist-canvas-wrap">
+        <div>
+          <div style="font-size:.65rem;color:var(--ink-4);margin-bottom:4px">Before</div>
+          <canvas id="histBefore"></canvas>
+        </div>
+        <div>
+          <div style="font-size:.65rem;color:var(--ink-4);margin-bottom:4px">After</div>
+          <canvas id="histAfter"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom actions -->
+    <div class="panel-bottom" style="margin-top:auto">
+      <button class="btn-panel-reset" id="btnResetPanel" aria-label="Reset settings">Reset</button>
+      <button class="btn-panel-export" id="btnExportPanel" aria-label="Export image">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        Export Image
+      </button>
+    </div>
+  </aside>
+
+</div>
+
+
+<!--  about page-->
+<div id="page-about" class="page about-page">
+  <section class="about-hero">
+    <div class="about-hero-left">
+      <p class="about-eyebrow">About Luminary</p>
+      <h1 class="about-title">Algorithms Meets<br><em>Artistry.</em></h1>
+      <p class="about-body">
+        Luminary started as a university project and grew into something more deliberate. 
+        It's a study in what browser-native image processing can actually do when you stop 
+        offloading work to the cloud and start trusting the hardware in front of you.
+      </p>
+      <div class="about-stats">
+        <div>
+          <div class="about-stat-num">99.9%</div>
+          <div class="about-stat-label">Local processing</div>
+        </div>
+        <div>
+          <div class="about-stat-num">Zero</div>
+          <div class="about-stat-label">Data retention</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-hero-right">
+      <img src="images/camera.jpg" alt="Camera">
+      <div class="about-quote">
+        "The most powerful tool is the one that respects the creator's autonomy."
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto-section">
+    <div class="manifesto-header">
+      <div class="manifesto-title">The Manifesto</div>
+      <a href="#" class="manifesto-link" data-page="privacy">View Ethics Code →</a>
+    </div>
+    <p class="manifesto-body">
+      Good imaging tools should be precise, explainable, and fast, 
+      not dependent on a server you don't control. Luminary is built on that principle.
+    </p>
+    <div class="privacy-pillars">
+      <div>
+        <div class="pillar-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.955 11.955 0 003 12c0 6.627 5.373 12 12 12 6.628 0 12-5.373 12-12 0-1.868-.428-3.636-1.188-5.21A11.954 11.954 0 0020.4 6"/></svg>
+        </div>
+        <div class="pillar-name">End-to-End Local</div>
+        <div class="pillar-desc">Your GPU does the heavy lifting. I don't upload your high-res originals to any server for processing.</div>
+      </div>
+      <div>
+        <div class="pillar-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"/></svg>
+        </div>
+        <div class="pillar-name">Ephemeral Sessions</div>
+        <div class="pillar-desc">Once you close the app, all temporary buffers are purged. The tool leaves no digital footprint behind.</div>
+      </div>
+      <div>
+        <div class="pillar-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div class="pillar-name">Zero-Lease AI</div>
+        <div class="pillar-desc">Processing is mathematical. No AI models are involved. Your personal style is never used to train anything.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mission-section">
+
+    <div class="mission-img">
+      <img src="images/iamahmad.jpeg" alt="Muhammad Ahmad">
+    </div>
+
+    <div class="mission-content">
+      <p class="mission-eyebrow">The Mission</p>
+      <blockquote class="mission-quote">
+        "I believe the best software is built with singular focus and a deep respect for the user."
+      </blockquote>
+      <p class="mission-body">
+        Studying Digital Image Processing at GCU made me realise how much depth sits behind something as ordinary as adjusting brightness. 
+        Gamma curves, histogram statistics, convolution kernels, these are elegant ideas, and most people never see them because they're 
+        buried inside closed software.
+        <br><br>
+        I wanted to build something that exposed that elegance directly. A tool where each button corresponds to a real algorithm, 
+        where the output is deterministic and explainable, and where the whole thing runs in a browser tab without asking for 
+        anything in return.
+      </p>
+      <div class="mission-sig">Muhammad Ahmad</div>
+      <div class="mission-sig-title">Student Developer, studying @ GCU Lahore </div>
+    </div>
+  </div>
+
+  <section class="about-cta">
+    <h2 class="cta-title">Ready to see through<br>the <em>Luminary lens?</em></h2>
+    <p class="cta-sub" style="margin-bottom:36px">Experience the power of professional imaging tools that finally put your privacy first.</p>
+    <div class="cta-actions">
+      <button class="btn-cta-white" data-page="editor">Launch Editor</button>
+      <button class="btn-cta-outline" data-page="privacy">Read Documentation</button>
+    </div>
+  </section>
+</div>
+
+
+<!--   privacy page-->
+<div id="page-privacy" class="page landing" style="padding-top:52px">
+  <div style="max-width:720px;margin:0 auto;padding:80px 40px">
+    <p style="font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4);margin-bottom:16px">Privacy Policy</p>
+    <h1 style="font-family:var(--font-serif);font-size:3rem;letter-spacing:-.03em;line-height:1.1;margin-bottom:24px">Your data.<br><em style="font-style:italic">Full stop.</em></h1>
+    <p style="font-size:.92rem;color:var(--ink-3);line-height:1.7;margin-bottom:40px">
+      Luminary operates on a zero-data architecture. We collect nothing. We store nothing. We transmit nothing.
+    </p>
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <div>
+        <h2 style="font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:8px">Local Processing</h2>
+        <p style="font-size:.85rem;color:var(--ink-3);line-height:1.65">All image manipulation happens inside your browser using the Canvas API. Your files are never transmitted to any server. The moment you close the tab, all data is discarded.</p>
+      </div>
+      <div>
+        <h2 style="font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:8px">No Cookies. No Tracking.</h2>
+        <p style="font-size:.85rem;color:var(--ink-3);line-height:1.65">Luminary does not use analytics, tracking pixels, or third-party cookies. We use localStorage only to remember your UI preferences (theme).</p>
+      </div>
+      <div>
+        <h2 style="font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:8px">No Account Required</h2>
+        <p style="font-size:.85rem;color:var(--ink-3);line-height:1.65">There is no login, no sign-up, no email capture. Luminary is a tool, not a platform.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="scripts/app.js"></script>
+</body>
+</html>
