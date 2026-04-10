@@ -1866,97 +1866,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
     }
 }
 
-/* mobile phones */
-@media (max-width: 480px) {
-    .btn-nav-cta {
-        display: none;
-    }
-    .hero-left {
-        padding: 40px 18px 48px;
-        gap: 20px;
-    }
-    .hero-body {
-        font-size: 0.88rem;
-    }
-    .features-section {
-        padding: 48px 18px;
-    }
-    .feature-card {
-        padding: 24px 20px;
-    }
-    .how-section {
-        padding: 48px 18px;
-        gap: 32px;
-    }
-    .how-imgs {
-        height: 220px;
-    }
-    .privacy-section {
-        margin: 0 12px 48px;
-        padding: 24px 18px;
-    }
-    .privacy-badges {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .faq-section {
-        padding: 48px 18px;
-    }
-    .cta-section {
-        padding: 64px 18px;
-    }
-    footer.landing-footer {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 36px 18px;
-    }
-    .about-hero-left {
-        padding: 40px 18px;
-    }
-    .manifesto-section {
-        padding: 40px 18px;
-    }
-    .mission-content {
-        padding: 40px 18px;
-    }
-    .about-cta {
-        padding: 56px 18px;
-    }
-    .canvas-bottom-bar {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 8px;
-    }
-    .view-mode-tabs {
-        justify-content: center;
-    }
-    .canvas-bottom-actions {
-        justify-content: flex-end;
-    }
-    .h-tool-btn {
-        min-width: 0;
-        flex: 1;
-        padding: 6px 8px;
-        font-size: 0.6rem;
-    }
-    .editor-h-toolbar {
-        padding: 6px 8px;
-    }
-    .canvas-info-chip {
-        font-size: 0.65rem;
-    }
-    .canvas-info-chip span {
-        padding: 4px 7px;
-    }
-    .editor-right-panel {
-        max-height: 60vh;
-    }
-    .editor-canvas-wrap {
-        height: 38vh;
-        min-height: 240px;
-    }
-}
-
 /* page transition base */
 .page {
     transition:
@@ -1986,6 +1895,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
 /* editor layout */
 .editor-page {
     flex-direction: row;
+}
+@media (max-width: 768px) {
+    .editor-page {
+        flex-direction: column !important;
+    }
 }
 
 /* toolbar wrap */
