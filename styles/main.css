@@ -1662,18 +1662,18 @@ input[type="range"]::-webkit-slider-thumb:hover {
         overflow-y: auto;
     }
     .editor-canvas-wrap {
-        height: 55vh;
-        min-height: 340px;
+        height: 42vh;
+        min-height: 260px;
         flex-shrink: 0;
     }
     .img-wrapper canvas {
-        max-height: calc(55vh - 52px - 40px - 110px);
+        max-height: calc(42vh - 52px - 40px - 110px);
     }
     .editor-right-panel {
         display: flex !important;
         width: 100% !important;
         height: auto !important;
-        max-height: 50vh;
+        max-height: 58vh;
         border-left: none;
         border-top: 1px solid var(--border);
         overflow-y: auto;
@@ -1883,11 +1883,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
         padding: 4px 7px;
     }
     .editor-right-panel {
-        max-height: 45vh;
+        max-height: 60vh;
     }
     .editor-canvas-wrap {
-        height: 50vh;
-        min-height: 280px;
+        height: 38vh;
+        min-height: 240px;
     }
 }
 
