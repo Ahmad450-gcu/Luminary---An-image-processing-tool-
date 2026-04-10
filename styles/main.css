@@ -1678,19 +1678,80 @@ input[type="range"]::-webkit-slider-thumb:hover {
         border-top: 1px solid var(--border);
         overflow-y: auto;
     }
+    /* shrink panel header */
+    .panel-section {
+        padding: 10px 14px;
+    }
+    .panel-title {
+        font-size: 0.62rem;
+    }
+    .panel-subtitle {
+        font-size: 0.58rem;
+    }
+    .auto-btn {
+        padding: 8px 12px;
+        font-size: 0.72rem;
+        margin-top: 8px;
+    }
+    .auto-btn-hint {
+        font-size: 0.6rem;
+        margin-top: 4px;
+    }
+
+    .filter-scroll {
+        padding: 6px 8px;
+    }
+    .filter-item {
+        padding: 7px 10px;
+        margin-bottom: 2px;
+    }
+    .filter-item-name {
+        font-size: 0.78rem;
+    }
+    .filter-item-desc {
+        font-size: 0.68rem;
+    }
+    .filter-icon-wrap {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+
+    .no-params-msg {
+        font-size: 0.7rem;
+        padding: 4px 0;
+    }
+
+    .controls-panel {
+        padding: 10px 14px;
+        gap: 12px;
+    }
+    .control-label {
+        font-size: 0.7rem;
+    }
+    .control-value {
+        font-size: 0.66rem;
+    }
     .canvas-bottom-bar {
         flex-wrap: wrap;
         gap: 8px;
         padding: 8px 12px;
         justify-content: space-between;
     }
+
     .h-tool-btn {
-        min-width: 56px;
-        padding: 6px 12px;
+        min-width: 44px;
+        padding: 4px 10px;
+        font-size: 0.55rem;
+        gap: 2px;
+    }
+    .h-tool-btn svg {
+        width: 14px;
+        height: 14px;
     }
     .editor-h-toolbar {
         gap: 2px;
-        padding: 8px 12px;
+        padding: 4px 12px;
     }
 }
 
@@ -1784,11 +1845,16 @@ input[type="range"]::-webkit-slider-thumb:hover {
     .h-tool-btn {
         min-width: 0;
         flex: 1;
-        padding: 6px 8px;
-        font-size: 0.6rem;
+        padding: 3px 6px;
+        font-size: 0.52rem;
+        gap: 2px;
+    }
+    .h-tool-btn svg {
+        width: 13px;
+        height: 13px;
     }
     .editor-h-toolbar {
-        padding: 6px 8px;
+        padding: 3px 8px;
     }
 
     /* info chip */
